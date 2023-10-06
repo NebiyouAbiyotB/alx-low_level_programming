@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+/*
+ * main - Prints the last digits of a randomly generated number
+ * and whether it is greater than 5. less than 6 or 0
+ *
+ * Return : Always 0.
+ */
 int main(void)
 {
 	int n;
@@ -9,7 +14,7 @@ int main(void)
 
 	srand(time(0));
 
-	n = rand();
+	n = rand() - RAND_MAX / 2;
 
 	lastDigit = n % 10;
 
@@ -30,4 +35,3 @@ int main(void)
 
 	return (0);
 }
-
